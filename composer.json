@@ -1,0 +1,24 @@
+{
+    "name": "redokun/customer-guru",
+    "description": "Simple wrapper for customer.guru",
+    "require": {
+        "php": ">=5.5",
+        "ext-curl": "*",
+        "zendframework/zend-http": "^2.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paolo Agostinetto",
+            "email": "paolo@redokun.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CustomerGuru\\": "src/CustomerGuru/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    }
+}
