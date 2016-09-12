@@ -1,5 +1,5 @@
 {
-    "name": "redokun/customer-guru",
+    "name": "redokun/customer-guru-api",
     "description": "Simple wrapper for customer.guru",
     "require": {
         "php": ">=5.5",
