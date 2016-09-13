@@ -1,6 +1,6 @@
 {
     "name": "redokun/customer-guru-api",
-    "description": "Simple wrapper for customer.guru",
+    "description": "Simple wrapper for customer.guru API",
     "require": {
         "php": ">=5.5",
         "ext-curl": "*",

@@ -25,7 +25,7 @@ class CustomerGuruTest extends \PHPUnit_Framework_TestCase {
 		$email = sprintf('email+rand%d@example.com', mt_rand(100, 999));
 
 		$this->assertFalse(
-			$guru->createContact($email, new \DateTime('now'))
+			$guru->sendSurvey($email, new \DateTime('now'))
 		);
 	}
 
@@ -42,7 +42,7 @@ class CustomerGuruTest extends \PHPUnit_Framework_TestCase {
 
 		$email = sprintf('email+rand%d@example.com', mt_rand(100, 999));
 
-		$guru->createContact($email, new \DateTime('now'));
+		$guru->sendSurvey($email, new \DateTime('now'));
 	}
 
 	public function testInvalidEmail(){
@@ -56,7 +56,7 @@ class CustomerGuruTest extends \PHPUnit_Framework_TestCase {
 		);
 
 		$this->assertFalse(
-			$guru->createContact("not-an-email", new \DateTime('now'))
+			$guru->sendSurvey("not-an-email", new \DateTime('now'))
 		);
 	}
 }

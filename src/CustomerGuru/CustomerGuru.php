@@ -50,7 +50,7 @@ class CustomerGuru {
 	 * @return bool
 	 * @throws ServiceException
 	 */
-	public function createContact($email, \DateTime $when = null){
+	public function sendSurvey($email, \DateTime $when = null){
 
 		// Email
 		if(is_array($email)){
