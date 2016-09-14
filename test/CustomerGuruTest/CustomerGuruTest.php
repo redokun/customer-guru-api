@@ -25,6 +25,23 @@ class CustomerGuruTest extends \PHPUnit_Framework_TestCase {
 		$email = sprintf('email+rand%d@example.com', mt_rand(100, 999));
 
 		$this->assertFalse(
+			$guru->sendSurvey($email)
+		);
+	}
+
+	public function testWithSpecificDate(){
+
+		$cred = include __DIR__."/../credentials.php";
+
+		$guru = new CustomerGuru(
+			$cred["apiKey"],
+			$cred["apiSecret"],
+			true
+		);
+
+		$email = sprintf('email+rand%d@example.com', mt_rand(100, 999));
+
+		$this->assertFalse(
 			$guru->sendSurvey($email, new \DateTime('now'))
 		);
 	}
