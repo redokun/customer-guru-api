@@ -90,15 +90,16 @@ class CustomerGuru {
 
 		$response = $client->send();
 
-		if($response->getStatusCode() != 200){
-			throw new ServiceException(sprintf("An error occured, service replied with non-ok response (HTTP %d)",
-				$response->getStatusCode()
-			));
-		}
-
 		$body = $response->getBody();
 
 		$data = json_decode($body, true);
+
+		if($response->getStatusCode() != 200){
+			throw new ServiceException(sprintf("An error occured, service replied with non-ok response (HTTP %d) (%s)",
+				$response->getStatusCode(),
+				$data["error"]
+			));
+		}
 
 		if($data["status"] != "OK" || (!isset($data["test"]) && $data["failed_to_send"])){
 			throw new ServiceException("Failed to create customer");
