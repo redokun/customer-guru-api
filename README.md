@@ -1,6 +1,8 @@
-# customer.guru PHP API
+# customer.guru PHP API v1
 
 > Simple wrapper for [customer.guru](https://customer.guru) API
+
+This library is based on the [first version (v1) of the API](https://customer.guru/api/documentation/v1) 
 
 ## Usage
 
